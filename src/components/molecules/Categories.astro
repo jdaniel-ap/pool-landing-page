@@ -1,0 +1,46 @@
+---
+import BadgeIcon from "../atoms/BadgeIcon.astro";
+import RulerIcon from "../atoms/RulerIcon.astro";
+import StarIcon from "../atoms/StarIcon.astro";
+
+const certifications = [
+  {
+    name: "Tecnología avanzada: cloradores, filtros eficientes, y limpieza automática para mantener tu piscina en óptimas condiciones sin esfuerzo.",
+    image: BadgeIcon,
+  },
+  {
+    name: "Piscinas personalizadas: adaptamos el diseño a tus gustos y necesidades, desde forma y tamaño hasta acabados y accesorios.",
+    image: RulerIcon,
+  },
+  {
+    name: "Proyectos de reforma o nuevas piscinas, con mantenimiento y respaldo de 20 años de experiencia en el sector.",
+    image: StarIcon,
+  },
+];
+---
+
+<section class="w-full md:px-40 pt-4 md:pt-14">
+  <div class="w-full md:mx-5">
+    <h2 class="text-5xl font-semibold text-center md:text-left leading-[50px]">
+      Porque elegirnos
+    </h2>
+  </div>
+  <ul
+    class="list-none py-10 md:py-14 flex flex-col gap-10 overflow-x-scroll [&::-webkit-scrollbar]:hidden px-5"
+  >
+    {
+      certifications.map((item, index) => (
+        <li
+          class={`w-full text-center md:text-left rounded-xl text-2xl flex justify-between items-center flex-col ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"} gap-5 md:gap-0`}
+        >
+          <div class="grid place-content-center w-[60%]">
+            <item.image class="size-44 fill-blue-500" />
+          </div>
+          <div class="grid place-content-center w-[50%]">
+            <span>{item.name}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

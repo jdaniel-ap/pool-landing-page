@@ -1,17 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/molecules/Hero.astro";
+import Header from "../components/molecules/Header.astro";
+import Categories from "../components/molecules/Categories.astro";
+import Services from "../components/molecules/Services.astro";
+
+const menuItems = ["Inicio", "Testomonios", "Servicios", "Contacto"];
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<header>
-			<h1>Logo</h1>
-			<menu>
-				<li>Contacto</li>
-				<li>Contacto</li>
-				<li>Contacto</li>
-				<li>Contacto</li>
-			</menu>
-		</header>
-	</main>
+  <main>
+    <Header />
+    <Hero />
+    <Categories />
+    <Services />
+  </main>
 </Layout>
