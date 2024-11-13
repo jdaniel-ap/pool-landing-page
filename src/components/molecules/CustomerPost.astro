@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+
+const IMAGE_SIZE = 50;
+---
+
+<div class="gap-4 flex py-4">
+  <Image
+    width={IMAGE_SIZE}
+    height={IMAGE_SIZE}
+    src="https://i.pravatar.cc/50?img=60"
+    class="rounded-full"
+    alt="pablo jurel"
+  />
+  <div>
+    <h2 class="font-semibold">Pellestrini</h2>
+    <span class="text-sm text-gray-800">Mar 2022</span>
+  </div>
+</div>

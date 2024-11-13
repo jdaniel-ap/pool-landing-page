@@ -1,0 +1,11 @@
+---
+const menuItems = ["Inicio", "Testomonios", "Servicios", "Contacto"];
+---
+
+<menu class="list-none gap-11 hidden md:flex">
+  {
+    menuItems.map((item) => (
+      <li class="font-inter font-medium cursor-pointer">{item}</li>
+    ))
+  }
+</menu>

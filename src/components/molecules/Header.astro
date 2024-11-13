@@ -1,5 +1,6 @@
 ---
 import HeaderLogo from "../atoms/HeaderLogo.astro";
+import MenuOptions from "../atoms/MenuOptions.astro";
 
 const menuItems = ["Inicio", "Testomonios", "Servicios", "Contacto"];
 ---
@@ -9,13 +10,7 @@ const menuItems = ["Inicio", "Testomonios", "Servicios", "Contacto"];
 >
   <HeaderLogo class="size-24" />
   <!-- navigation -->
-  <menu class="list-none gap-11 hidden md:flex">
-    {
-      menuItems.map((item) => (
-        <li class="font-inter font-medium cursor-pointer">{item}</li>
-      ))
-    }
-  </menu>
+  <MenuOptions />
   <!-- Social Media -->
   <ul class="flex gap-8">
     <li>

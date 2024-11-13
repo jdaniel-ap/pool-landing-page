@@ -1,0 +1,24 @@
+---
+import worker from "../../assets/images/soviet-worker.webp";
+---
+
+<section
+  class="px-8 flex justify-center items-center lg:px-40 lg:grid lg:grid-cols-2 py-10 lg:py-20 bg-gray-50"
+>
+  <div class="flex items-center">
+    <div class="space-y-6">
+      <h2 class="text-3xl lg:text-4xl font-semibold lg:pr-36">
+        Contactenos y hablemos del proyecto de sus suenos
+      </h2>
+      <p class="text-gray-600">
+        Somos la mejor opción para el desarrollo de los mismos
+      </p>
+      <button class="bg-black px-4 py-2 rounded-lg text-white font-semibold"
+        >Contacto</button
+      >
+    </div>
+  </div>
+  <div class="flex-1 justify-center items-end rounded-xl hidden lg:flex">
+    <img src={worker.src} class="size-96" alt="trabajador" />
+  </div>
+</section>
