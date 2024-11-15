@@ -74,13 +74,11 @@ console.log(await getCollection("services"));
   <ul class="flex flex-wrap px-8 md:px-40 pt-10">
     {
       cards.map((item) => (
-        <li>
-          <ServiceCard
-            title={item.title}
-            image={item.image}
-            description={item.description}
-          />
-        </li>
+        <ServiceCard
+          title={item.title}
+          image={item.image}
+          description={item.description}
+        />
       ))
     }
   </ul>
