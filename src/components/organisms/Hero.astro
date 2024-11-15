@@ -1,9 +1,13 @@
 ---
+import { Image } from "astro:assets";
 import swimmingPoolImage from "../../assets/images/swimming-pool.webp";
-import CustomerPost from "./CustomerPost.astro";
+import CustomerPost from "../molecules/CustomerPost.astro";
 ---
 
-<section class="px-5 lg:px-40 py-10 lg:pt-20 lg:pb-10 h-auto lg:w-full">
+<section
+  class="px-5 lg:px-40 py-10 lg:pt-20 lg:pb-10 h-auto lg:w-full"
+  aria-label="Reseña de nuestros clientes"
+>
   <div
     class="grid grid-cols-1 lg:grid-cols-2 size-full bg-[#E7FAFE] rounded-2xl overflow-hidden"
   >
@@ -68,9 +72,12 @@ import CustomerPost from "./CustomerPost.astro";
       </div>
     </article>
     <figure class="relative hidden lg:block">
-      <img
+      <Image
+        loading="eager"
+        width="200"
+        height="200"
         class="absolute size-full left-0 top-0 object-cover"
-        src={swimmingPoolImage.src}
+        src="/images/swimming-pool.webp"
         alt="Imagen de una piscina en una zona urbana"
       />
     </figure>
