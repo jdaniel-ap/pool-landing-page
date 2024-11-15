@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+
+export const getStaticPaths = async () => {
+  const services = await getCollection("services");
+  return services.map((item) => ({
+    params: { id: item.slug },
+    props: { service: item },
+  }));
+};
+
+const { service } = Astro.props;
+const {
+  data: { description, image, title },
+} = service;
+
+const { Content } = await render(service);
+---
+
+<Layout title={title}>
+  <section class="px-8 lg:px-40">
+    <Image
+      loading="eager"
+      height="400"
+      width="400"
+      src={image}
+      alt={`Servicio de ${title}`}
+      transition:name={`img-${service.slug}`}
+    />
+  </section>
+</Layout>

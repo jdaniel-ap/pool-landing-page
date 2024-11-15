@@ -1,11 +1,13 @@
 ---
-const menuItems = ["Inicio", "Testomonios", "Servicios", "Contacto"];
+const menuItems = ["inicio", "testomonios", "servicios", "contacto"];
 ---
 
 <menu class="list-none gap-11 hidden md:flex" aria-label="menu de navegación">
   {
     menuItems.map((item) => (
-      <li class="font-inter font-medium cursor-pointer">{item}</li>
+      <li class="font-inter font-medium cursor-pointer capitalize">
+        <a href={item === "inicio" ? "/" : `/${item}`}>{item}</a>
+      </li>
     ))
   }
 </menu>
