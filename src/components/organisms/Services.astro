@@ -1,69 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import ServiceCard from "./ServiceCard.astro";
-const cards = [
-  {
-    title: "Construcción",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Construimos espacios únicos con materiales duraderos, pensados para su uso y disfrute.",
-  },
-  {
-    title: "Fábrica de alambres",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Producción de alambres de alta resistencia, listos para múltiples aplicaciones.",
-  },
-  {
-    title: "Instalación de cercos",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Instalamos cercos que combinan estética y seguridad para su propiedad.",
-  },
-  {
-    title: "Venta de piletas",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Ofrecemos piletas de gran calidad y diseño, adaptables a todo tipo de espacios.",
-  },
-  {
-    title: "Instalación de piletas",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Realizamos la instalación de piletas con precisión, rapidez y materiales de primera.",
-  },
-  {
-    title: "Mantenimiento de piletas",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Mantenemos sus piletas limpias y seguras, con un servicio confiable y puntual.",
-  },
-  {
-    title: "Accesorios para piletas",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Todos los accesorios y complementos para mejorar y personalizar sus piletas.",
-  },
-  {
-    title: "Cubiertas",
-    image:
-      "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg",
-    description:
-      "Cubiertas de mayor calidad para proteger y extender la vida útil de sus piletas.",
-  },
-];
 
-console.log(await getCollection("services"));
+const services = await getCollection("services");
 ---
 
-<section class="flex flex-col pt-14 gap-8 w-full lg:mt-10">
+<section
+  class="flex flex-col pt-14 gap-8 w-full lg:mt-10"
+  aria-label="Servicios disponibles"
+>
   <h1 class="text-4xl lg:text-5xl font-semibold text-center px-5 md:px-40">
     Nuestros servicios
   </h1>
@@ -72,14 +17,6 @@ console.log(await getCollection("services"));
     espacio en un paraíso es más fácil que nunca.
   </p>
   <ul class="flex flex-wrap px-8 md:px-40 pt-10">
-    {
-      cards.map((item) => (
-        <ServiceCard
-          title={item.title}
-          image={item.image}
-          description={item.description}
-        />
-      ))
-    }
+    {services.map((item) => <ServiceCard data={item} />)}
   </ul>
 </section>

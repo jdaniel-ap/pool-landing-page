@@ -1,7 +1,7 @@
 ---
 title: "Instalacion de picinas"
-description: "lore 2"
-image: "favicon.svg"
+image: "/images/swimming-pool.webp"
+description: "Cubiertas de piscina de alta calidad para proteger tu pileta y conservar su temperatura"
 ---
 
 Variedad de piletas de alta calidad **en diferentes tamaños y diseños** para cada tipo de hogar

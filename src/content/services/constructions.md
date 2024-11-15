@@ -1,6 +1,6 @@
 ---
 title: "Construccion"
-image: "https://www.piscinasci.com/wp-content/uploads/2024/05/1-portada-construccion-reforma-piscinas.jpg"
+image: "/images/swimming-pool.webp"
 description: "Servicio completo de construcción de piscinas personalizadas, adaptadas a tus necesidades y espacio."
 ---
 

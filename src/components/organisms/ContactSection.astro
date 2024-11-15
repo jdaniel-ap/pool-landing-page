@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import worker from "../../assets/images/worker.webp";
 ---
 
 <section
+  aria-label="Seccion de contacto"
   class="px-8 flex justify-center items-center lg:px-40 lg:grid lg:grid-cols-2 py-10 lg:py-20 bg-gray-50"
 >
   <div class="flex items-center">
@@ -25,7 +25,7 @@ import worker from "../../assets/images/worker.webp";
       decoding="async"
       width="350"
       height="350"
-      src={worker}
+      src="/images/worker.webp"
       class="size-96"
       alt="imagen de trabajador"
     />
