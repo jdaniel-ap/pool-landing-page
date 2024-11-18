@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
+import ServiceContent from "../../components/organisms/ServiceContent.astro";
 
 export const getStaticPaths = async () => {
   const services = await getCollection("services");
@@ -13,21 +14,63 @@ export const getStaticPaths = async () => {
 
 const { service } = Astro.props;
 const {
-  data: { description, image, title },
+  data: { image, title, options },
 } = service;
-
 const { Content } = await render(service);
 ---
 
-<Layout title={title}>
-  <section class="px-8 lg:px-40">
-    <Image
-      loading="eager"
-      height="400"
-      width="400"
-      src={image}
-      alt={`Servicio de ${title}`}
-      transition:name={`img-${service.slug}`}
-    />
+<Layout title={`Servicio ${title}`}>
+  <div class="flex items-start gap-10 h-[200px]">
+    <div class="relative w-full h-full">
+      <Image
+        loading="eager"
+        height="800"
+        width="800"
+        src={image}
+        alt={`Servicio de ${title}`}
+        class="absolute top-0 left-0 size-full object-cover"
+        transition:name={`img-${service.slug}`}
+      />
+      <div class="absolute size-full"></div>
+    </div>
+  </div>
+  <section
+    class="px-8 lg:px-40 pt-14 prose lg:prose-xl max-w-none"
+    aria-label="Detalle del servicio"
+  >
+    <button class="my-10 flex gap-5 items-center bg-transparent" id="back-btn"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-chevron-left"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+        ></path>
+      </svg> Volver</button
+    >
+    <h1 class="text-5xl font-semibold">Servicio {title}</h1>
+    <Content />
+    <ServiceContent data={options} />
+    <div class="mt-20">
+      Escribenos a nuestros <a
+        href="https://wa.me/5493541215221"
+        target="_blank"
+        rel="noreferrer">Whatsapp</a
+      > o a nuestra <a
+        href="mailto:email@provedor.com.br?subject=Assunto do email&cc=copia@provedor.com.br&bcc=copiaoculta@provedor.com.br&body=Conteúdo do email que será preenchido automaticamente"
+        >direccion de correo</a
+      >
+    </div>
   </section>
 </Layout>
+
+<script>
+  document.querySelector("#back-btn").addEventListener("click", () => {
+    window.history.back();
+  });
+</script>
