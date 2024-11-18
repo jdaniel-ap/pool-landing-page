@@ -15,7 +15,11 @@ const initialService = data.find((item) => item.id === activeTab);
           activeTab === item.id ? "shadow-2xl rounded-3xl font-semibold" : ""
         }`}
       >
-        <img class="size-full absolute object-cover" src={item?.images[2]} />
+        <img
+          class="size-full absolute object-cover"
+          src={item?.images[2]}
+          alt="Background de boton"
+        />
         <div class="bg-black opacity-60 size-full absolute" />
         <span class="z-40 text-white">{item.title}</span>
         <div
