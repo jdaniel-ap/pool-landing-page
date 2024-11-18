@@ -6,7 +6,10 @@ let activeTab = "1";
 const initialService = data.find((item) => item.id === activeTab);
 ---
 
-<div class="flex flex-wrap gap-5">
+<div
+  class="flex flex-wrap gap-5"
+  aria-label="Selector de servicios, click para ver mas"
+>
   {
     data?.map((item) => (
       <button
