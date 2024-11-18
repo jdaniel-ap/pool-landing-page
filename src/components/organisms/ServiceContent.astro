@@ -11,11 +11,19 @@ const initialService = data.find((item) => item.id === activeTab);
     data?.map((item) => (
       <button
         id={item.id}
-        class={`service-btns flex-1 min-w-40 h-32 rounded-lg border-gray-200 border-[2px] flex items-center justify-center cursor-pointer select-none ${
-          activeTab === item.id ? "bg-main-light" : ""
+        class={`service-btns overflow-hidden relative flex-1 min-w-40 h-32 rounded-lg transition-all flex items-center justify-center cursor-pointer select-none ${
+          activeTab === item.id ? "shadow-2xl rounded-3xl" : ""
         }`}
       >
-        {item.title}
+        <img class="size-full absolute object-cover" src={item?.images[2]} />
+        <div class="bg-black opacity-60 size-full absolute" />
+        <span class="z-40 text-white">{item.title}</span>
+        <div
+          class={`marker absolute size-3 rounded-full mt-4 mr-4 ${activeTab === item.id ? "bg-yellow-500" : ""} top-0 right-0`}
+        />
+        <div
+          class={`marker-pulse absolute size-3 rounded-full mt-4 mr-4 ${activeTab === item.id ? "bg-yellow-500" : ""} animate-ping top-0 right-0`}
+        />
       </button>
     ))
   }
@@ -47,10 +55,22 @@ const initialService = data.find((item) => item.id === activeTab);
 <script define:vars={{ data }}>
   const buttons = document.querySelectorAll(".service-btns");
   const container = document.querySelector("#service-content");
+  const markers = document.querySelectorAll(".marker");
+  const markersPulse = document.querySelectorAll(".marker-pulse");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      buttons.forEach((btn) => {
-        btn.classList.toggle("bg-main-light", btn.id === button.id);
+      buttons.forEach((btn, index) => {
+        btn.classList.toggle("shadow-2xl", btn.id === button.id);
+        btn.classList.toggle("rounded-3xl", btn.id === button.id);
+        markers[index].classList.toggle("bg-yellow-500", btn.id === button.id);
+        markersPulse[index].classList.toggle(
+          "animated-ping",
+          btn.id === button.id,
+        );
+        markersPulse[index].classList.toggle(
+          "bg-yellow-500",
+          btn.id === button.id,
+        );
       });
       const selectedElement = data.find((item) => item.id === button.id);
       if (!selectedElement) return;
