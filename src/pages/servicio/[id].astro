@@ -69,7 +69,7 @@ const { Content } = await render(service);
   </section>
 </Layout>
 
-<script>
+<script is:inline>
   document.querySelector("#back-btn").addEventListener("click", () => {
     window.history.back();
   });

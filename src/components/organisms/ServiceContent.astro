@@ -2,7 +2,8 @@
 import { Image } from "astro:assets";
 
 const { data } = Astro.props;
-let activeTab = data[0]?.id || "1"; // Estado inicial del tab activo
+let activeTab = "1";
+const initialService = data.find((item) => item.id === activeTab);
 ---
 
 <div class="flex flex-wrap gap-5">
@@ -23,26 +24,20 @@ let activeTab = data[0]?.id || "1"; // Estado inicial del tab activo
 <div id="service-content" class="mt-5">
   <!-- Aquí se cargará dinámicamente el contenido según el tab seleccionado -->
   {
-    activeTab && (
+    initialService && (
       <div>
-        <h2 class="text-xl font-bold">
-          {data.find((item) => item.id === activeTab)?.title}
-        </h2>
-        <p class="text-gray-600">
-          {data.find((item) => item.id === activeTab)?.description}
-        </p>
+        <h2 class="text-xl font-bold">{initialService?.title}</h2>
+        <p class="text-gray-600">{initialService?.description}</p>
         <div class="gap-3 mt-3 grid grid-cols-2">
-          {data
-            .find((item) => item.id === activeTab)
-            ?.images.map((img) => (
-              <Image
-                width="250"
-                height="250"
-                src={img}
-                alt="Imagen"
-                class="size-full object-cover rounded-lg border"
-              />
-            ))}
+          {initialService?.images?.map((img) => (
+            <Image
+              width="250"
+              height="250"
+              src={img}
+              alt="Imagen"
+              class="size-full object-cover rounded-lg border"
+            />
+          ))}
         </div>
       </div>
     )
@@ -58,9 +53,10 @@ let activeTab = data[0]?.id || "1"; // Estado inicial del tab activo
         btn.classList.toggle("bg-main-light", btn.id === button.id);
       });
       const selectedElement = data.find((item) => item.id === button.id);
+      if (!selectedElement) return;
       container.innerHTML = `
-        <h2 class="text-xl font-bold">${selectedElement?.title}</h2>
-        <p class="text-gray-600">${selectedElement?.description}</p>
+        <h2 class="text-xl font-bold">${selectedElement?.title || ""}</h2>
+        <p class="text-gray-600">${selectedElement?.description || ""}</p>
         <div class="gap-3 mt-3 grid grid-cols-2">
           ${selectedElement.images
             .map(
