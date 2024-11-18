@@ -12,7 +12,7 @@ const initialService = data.find((item) => item.id === activeTab);
       <button
         id={item.id}
         class={`service-btns overflow-hidden relative flex-1 min-w-40 h-32 rounded-lg transition-all flex items-center justify-center cursor-pointer select-none ${
-          activeTab === item.id ? "shadow-2xl rounded-3xl" : ""
+          activeTab === item.id ? "shadow-2xl rounded-3xl font-semibold" : ""
         }`}
       >
         <img class="size-full absolute object-cover" src={item?.images[2]} />
@@ -60,8 +60,9 @@ const initialService = data.find((item) => item.id === activeTab);
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       buttons.forEach((btn, index) => {
-        btn.classList.toggle("shadow-2xl", btn.id === button.id);
+        btn.classList.toggle("shadow-xl", btn.id === button.id);
         btn.classList.toggle("rounded-3xl", btn.id === button.id);
+        btn.classList.toggle("font-semibold", btn.id === button.id);
         markers[index].classList.toggle("bg-yellow-500", btn.id === button.id);
         markersPulse[index].classList.toggle(
           "animated-ping",
