@@ -1,0 +1,37 @@
+---
+import SocialMedia from "../../components/molecules/SocialMedia.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+  <section
+    class="px-5 lg:px-40 lg:mt-10 lg:pt-14 lg:pb-10 h-auto lg:w-full flex flex-col gap-14"
+    aria-label="Seccion de contacto"
+  >
+    <h1 class="text-4xl lg:text-5xl font-semibold text-center px-5 md:px-40">
+      Contacto
+    </h1>
+    <div class="w-full flex flex-col items-center justify-center gap-10">
+      <p class="text-xl leading-10">
+        Escribenos a nuestros <a
+          href="https://wa.me/5493541215221"
+          target="_blank"
+          rel="noreferrer"
+          class="under-text text-slate-700">Whatsapp</a
+        > o a nuestra <a
+          class="under-text"
+          href="mailto:grupobennu1508@gmail.com?subject=Info sobre servicios&cc=grupobennu1508@gmail.com&body=Quisiera mas detalles sobre sus servicios"
+          >direccion de correo</a
+        >, tambien buscanos en nuestras redes sociales
+      </p>
+      <SocialMedia />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .under-text {
+    text-decoration: underline !important;
+    font-weight: 600;
+  }
+</style>
