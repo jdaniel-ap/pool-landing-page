@@ -1,6 +1,6 @@
 ---
 title: "Construccion"
-image: "/images/construction.jpg"
+image: "/images/construccion.jpg"
 description: "Servicio completo de construcción de piscinas personalizadas, adaptadas a tus necesidades y espacio."
 options:
   [

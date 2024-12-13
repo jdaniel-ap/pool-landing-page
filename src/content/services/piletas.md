@@ -1,6 +1,6 @@
 ---
 title: "Piletas"
-image: "/images/swimming-pool.webp"
+image: "/images/pileta.webp"
 description: "Soluciones completas para piscinas que combinan funcionalidad, estética y seguridad."
 options:
   [
@@ -10,9 +10,9 @@ options:
       description: "Piscina de 8x3 m con instalación completa, equipo de filtrado, 2 luces RGB, una hilera perimetral de lozetas atérmicas, gabinete de fibra y cavado completo del pozo. Diseñada para quienes buscan espacio, estilo y funcionalidad en su hogar.",
       images:
         [
-          "/images/pools/service_a/service_a.jpeg",
-          "/images/pools/service_a/service_b.jpeg",
-          "/images/pools/service_a/service_c.jpeg",
+          "/images/pools/service_a/pileta_modelo_1.jpeg",
+          "/images/pools/service_a/pileta_modelo_2.jpeg",
+          "/images/pools/service_a/pileta_modelo_3.jpeg",
         ],
     },
     {
@@ -21,9 +21,9 @@ options:
       description: "Piscina de 7x3 m con todos los detalles: instalación completa, equipo de filtrado, 2 luces RGB, lozetas atérmicas perimetrales, gabinete de fibra y cavado del pozo. Una opción equilibrada entre tamaño y funcionalidad.",
       images:
         [
-          "/images/pools/service_a/service_a.jpeg",
-          "/images/pools/service_a/service_b.jpeg",
-          "/images/pools/service_a/service_c.jpeg",
+          "/images/pools/service_a/pileta_modelo_1.jpeg",
+          "/images/pools/service_a/pileta_modelo_2.jpeg",
+          "/images/pools/service_a/pileta_modelo_3.jpeg",
         ],
     },
     {
@@ -32,9 +32,9 @@ options:
       description: "Piscina compacta de 5.5x3 m ideal para espacios más reducidos. Incluye instalación completa, equipo de filtrado, 2 luces RGB, una hilera perimetral de lozetas atérmicas, gabinete de fibra y cavado del pozo. Perfecta para disfrutar sin comprometer el espacio.",
       images:
         [
-          "/images/pools/service_a/service_a.jpeg",
-          "/images/pools/service_a/service_b.jpeg",
-          "/images/pools/service_a/service_c.jpeg",
+          "/images/pools/service_a/pileta_modelo_1.jpeg",
+          "/images/pools/service_a/pileta_modelo_2.jpeg",
+          "/images/pools/service_a/pileta_modelo_3.jpeg",
         ],
     },
   ]

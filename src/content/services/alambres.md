@@ -1,6 +1,6 @@
 ---
 title: "Alambres"
-image: "/images/fence.webp"
+image: "/images/cerca_de_alambre.webp"
 description: "Soluciones de cercos y alambres de alta calidad para proteger y delimitar tus espacios con eficiencia y estilo."
 options:
   [
