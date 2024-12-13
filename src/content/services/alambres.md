@@ -29,6 +29,6 @@ options:
   ]
 ---
 
-En **Manila**, somos expertos en la **fabricación e instalación de cercos y alambres** que combinan funcionalidad, seguridad y estética. Nuestro equipo altamente capacitado utiliza materiales de la más alta calidad y técnicas innovadoras para ofrecer soluciones duraderas y personalizadas.
+En **Grupo Bennu**, somos expertos en la **fabricación e instalación de cercos y alambres** que combinan funcionalidad, seguridad y estética. Nuestro equipo altamente capacitado utiliza materiales de la más alta calidad y técnicas innovadoras para ofrecer soluciones duraderas y personalizadas.
 
 Ya sea que necesites un **cerca perimetral resistente**, un sistema de protección decorativo o una solución especializada para proyectos industriales, trabajamos contigo para garantizar un resultado que cumpla con tus expectativas. Nos comprometemos a brindar un servicio eficiente, cumpliendo con los tiempos y presupuestos acordados.

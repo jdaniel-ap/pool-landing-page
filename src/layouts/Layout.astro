@@ -4,9 +4,10 @@ import Header from "../components/organisms/Header.astro";
 import Footer from "../components/organisms/Footer.astro";
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,10 +15,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="Expertos en construcción de piscinas, fabricación de alambres de calidad y diseño de monoambientes modernos. Contáctanos para proyectos personalizados."
-    />
+    <meta name="description" content={description} />
     <meta
       name="keywords"
       content="construcción de piscinas, piletas, fabricación de alambres, construcción de monoambientes, diseño de interiores, materiales de construcción, proyectos personalizados"
@@ -37,12 +35,15 @@ const { title } = Astro.props;
       content="https://grupo-bennu.com/images/pileta.webp"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
     <meta name="author" content="Grupo Bennu" />
+    <meta property="og:site_name" content="Grupo Bennu" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/bennu_fav.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
