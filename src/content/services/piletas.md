@@ -40,6 +40,6 @@ options:
   ]
 ---
 
-En **Manila**, nos especializamos en la **instalación de piscinas** diseñadas para adaptarse a tus necesidades y espacio. Nuestro equipo de expertos combina **tecnología de punta**, materiales de alta calidad y un compromiso inquebrantable con la **satisfacción del cliente**.
+En **Grupo Bennu**, nos especializamos en la **instalación de piscinas** diseñadas para adaptarse a tus necesidades y espacio. Nuestro equipo de expertos combina **tecnología de punta**, materiales de alta calidad y un compromiso inquebrantable con la **satisfacción del cliente**.
 
 Ya sea que busques una **piscina amplia y moderna** o una opción más compacta y funcional, trabajamos contigo para crear el espacio ideal. Garantizamos un proceso eficiente desde la **planeación y cavado** hasta la instalación completa, siempre respetando los plazos y presupuestos acordados.
