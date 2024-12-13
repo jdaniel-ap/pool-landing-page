@@ -12,7 +12,10 @@ export const getStaticPaths = async () => {
   }));
 };
 
+export const prerender = true;
+
 const { service } = Astro.props;
+console.log(Astro.props, "PROOOPS");
 const {
   data: { image, title, options },
 } = service;
