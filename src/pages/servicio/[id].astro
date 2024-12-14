@@ -16,14 +16,15 @@ export const prerender = true;
 
 const { service } = Astro.props;
 const {
-  data: { image, title, options },
+  data: { image, title, options, meta },
 } = service;
 const { Content } = await render(service);
 ---
 
 <Layout
   title={`Servicio ${title}`}
-  description={`Informacion del servicio de ${title} - Grupo Bennu`}
+  description={`${meta} - Grupo Bennu`}
+  image={image}
 >
   <div class="flex items-start gap-10 h-[200px]">
     <div class="relative w-full h-full">

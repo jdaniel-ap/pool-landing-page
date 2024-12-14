@@ -2,6 +2,7 @@
 title: "Alambres"
 image: "/images/cerca_de_alambre.webp"
 description: "Soluciones de cercos y alambres de alta calidad para proteger y delimitar tus espacios con eficiencia y estilo."
+meta: "fabricación e instalación de cercos y alambres"
 options:
   [
     {

@@ -1,7 +1,8 @@
 ---
 title: "Piletas"
 image: "/images/pileta.webp"
-description: "Soluciones completas para piscinas que combinan funcionalidad, estética y seguridad."
+description: "Soluciones completas para piletas que combinan funcionalidad, estética y seguridad."
+meta: "Instalacion y construccion de piletas"
 options:
   [
     {
