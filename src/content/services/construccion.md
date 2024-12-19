@@ -2,7 +2,7 @@
 title: "Construccion"
 image: "/images/construccion.jpg"
 meta: "monoambientes están diseñados para aprovechar cada metro cuadrado de manera inteligente"
-description: "Servicio completo de construcción de piscinas personalizadas, adaptadas a tus necesidades y espacio."
+description: "Servicio completo de construcción de piscinas personalizadas, adaptadas a tus necesidades y espacio. Argentina"
 options:
   [
     {
