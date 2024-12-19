@@ -83,6 +83,10 @@ const { Content } = await render(service);
 
 <script is:inline>
   document.querySelector("#back-btn").addEventListener("click", () => {
-    window.history.back();
+    if (document.referrer && document.referrer.includes(window.location.hostname)) {
+      window.history.back();
+    } else {
+      window.location.href = "/servicios";
+    }
   });
 </script>
